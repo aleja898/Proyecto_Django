@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        body {
+            background-color: rgb(191, 224, 196);
+            color: rgb(7, 6, 6);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .contenedor {
+            background-color: rgb(14, 41, 16);
+            color: white;
+            max-width: 1200px;
+            height: auto;
+            margin: 0 auto 40px auto;
+            border-radius: 10px;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .contenedor h1 {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            text-align: left;
+            flex-shrink: 0;
+        }
+
+        .contenedor .texto {
+            color: white;
+            margin: 0;
+            font-size: 1.1em;
+            text-align: left;
+            flex-grow: 1;
+            min-width: 250px;
+        }
+
+        .imagen1 {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+            text-align: center;
+            flex-shrink: 0;
+            margin-top: 15px;
+        }
+
+        .imagen1 img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .pregunta {
+            background-color: rgb(135, 177, 107);
+            max-width: 1200px;
+            margin: 0 auto 20px auto;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #080808;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pregunta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .pregunta h2 {
+            text-align: left;
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .pregunta p {
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        .texto1 {
+            width: 400px;
+            height: auto;
+            text-align: center;
+            color:#56a35d
+        }
+        
+        .pregunta-con-imagen {
+            background-color: rgb(135, 177, 107);
+            max-width: 1200px;
+            margin: 0 auto 20px auto;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #0e0d0d;
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            flex-wrap: wrap;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pregunta-con-imagen:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .contenido-texto {
+            flex: 1;
+            min-width: 300px;
+            font-size: 1.2em;
+        }
+
+        .contenido-imagen {
+            flex: 0 0 300px;
+            text-align: center;
+        }
+        .pregunta1 {
+            max-width: 1200px;
+            height: auto;
+            color: #0e0d0d;
+            display: flex;
+            text-align: right;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 1.2em;
+        }
+
+        .pregunta-funcion {
+            background-color: rgb(135, 177, 107);
+            max-width: 1200px;
+            margin: 0 auto 20px auto;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #0e0d0d;
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            flex-wrap: wrap;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 1.2em;
+        }
+        .prefunta2 {
+            font-size: 1.2em;
+        }
+        .pregunta-funcion:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .contenido-imagen-izquierda {
+            flex: 0 0 300px;
+            text-align: center;
+        }
+        
+        .contenido-texto-derecha {
+            flex: 1;
+            min-width: 300px;
+            font-size: 1.2em;
+        }
+        
+        .imagen2 {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .imagen3 {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            height: auto;
+            display: block;
+        }
+        .imagen4 {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .imagen2:hover {
+            transform: scale(1.05);
+        }
+        .imagen3:hover {
+            transform: scale(1.05);
+        }
+        .imagen4:hover {
+            transform: scale(1.05);
+        }
+
+        .ejemplos-empresas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .empresa-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid rgb(14, 41, 16);
+        }
+
+        .empresa-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .empresa-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .empresa-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            object-fit: contain;
+            background-color: #f8f9fa;
+            padding: 5px;
+        }
+
+        .empresa-nombre {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: rgb(14, 41, 16);
+            margin: 0;
+        }
+
+        .empresa-descripcion {
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+        }
+  
+        .tabla-ventajas-desventajas {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .tabla-ventajas-desventajas th {
+            background-color: rgb(14, 41, 16);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .tabla-ventajas-desventajas td {
+            padding: 25px;
+            vertical-align: top;
+            line-height: 1.6;
+            color: #0e0d0d;
+        }
+
+        .ventajas-col {
+            background-color: rgb(200, 240, 200);
+            border-right: 3px solid rgb(14, 41, 16);
+        }
+
+        .desventajas-col {
+            background-color: rgb(240, 200, 200);
+        }
+
+        @media (max-width: 768px) {
+            .pregunta-con-imagen,
+            .pregunta-funcion {
+                flex-direction: column;
+            }
+            
+            .contenido-imagen,
+            .contenido-imagen-izquierda {
+                order: -1;
+                flex: none;
+                width: 100%;
+            }
+
+            .tabla-ventajas-desventajas {
+                font-size: 0.9em;
+            }
+
+            .tabla-ventajas-desventajas th {
+                font-size: 1.2em;
+                padding: 15px;
+            }
+
+            .tabla-ventajas-desventajas td {
+                padding: 20px;
+            }
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Framework Django</h1>
+        <p class="texto1">Bienvenido al mundo de la información de Django</p>
+        <div class="imagen1">
+            <img src="https://cdn.iconscout.com/icon/free/png-256/free-django-3550620-2970205.png" alt="django logo">
+        </div>
+    </div>
+
+    <div class="pregunta-con-imagen">
+        <div class="contenido-texto">
+            <h2>¿Qué es Django?</h2>
+            <p>Django es un framework de desarrollo web de alto nivel, escrito en Python, que permite desarrollar aplicaciones web rápidamente. Es una de las opciones más populares para el desarrollo de aplicaciones web en Python.</p>
+        </div>
+        <div class="contenido-imagen">
+            <img class="imagen2" src="https://diseñowebbarcelona.biz/wp-content/uploads/2024/11/DALL%C2%B7E-2024-11-11-09.59.48-Portada-de-articulo-titulada-%C2%BFQue-es-Django_-Frameworks-en-PHP.-La-imagen-muestra-una-computadora-portatil-sobre-un-escritorio-minimalista-con-codig.webp" alt="Qué es Django">
+        </div>
+    </div>
+
+    <div class="pregunta-funcion">
+        <div class="contenido-imagen-izquierda">
+            <img class="imagen3" src="https://codingornot.com/wp-content/uploads/2017/10/funcionamiento-de-django.png" alt="Funcion principal de Django">
+        </div>
+        <div class="contenido-texto-derecha">
+            <h2>Función principal de Django</h2>
+            <p>Django se encarga de las cosas difíciles para que usted pueda concentrarse en crear sus aplicaciones web. Django enfatiza la reutilización de componentes, también conocida como DRY (Don't Repeat Yourself), y viene con características listas para usar como sistema de inicio de sesión, conexión de base de datos y operaciones CRUD (Crear Leer Actualizar Eliminar).</p>
+        </div>
+    </div>
+
+    <div class="pregunta">
+        <div class="prefunta2">
+        <h2>Estructura de Django</h2>
+        <p>Django sigue el patrón de diseño MVT (Modelo Vista Plantilla).</p>
+        </div>
+        <ul>
+            <li><strong>Modelo:</strong> Los datos que desea presentar, generalmente datos de una base de datos.</li>
+            <li><strong>Vista:</strong> Un controlador de solicitudes que devuelve la plantilla y el contenido relevantes, según la solicitud del usuario.</li>
+            <li><strong>Plantilla:</strong> Un archivo de texto (como un archivo HTML) que contiene el diseño de la página web, con lógica sobre cómo mostrar los datos.</li>
+        </ul>
+        <div class="contenido-imagen">
+            <img class="imagen4" src="https://espifreelancer.com/images/Django_mtv.webp" alt="Funcion principal de Django">
+        </div>
+    </div>
+
+    <div class="pregunta">
+        <h2>Ventajas y Desventajas de Django</h2>
+        <table class="tabla-ventajas-desventajas">
+            <tr>
+                <th class="ventajas-col">Ventajas</th>
+                <th class="desventajas-col">Desventajas</th>
+            </tr>
+            <tr>
+                <td class="ventajas-col">
+                    Django es una herramienta poderosa para el desarrollo de aplicaciones web, con una gran cantidad de funciones integradas y una gran cantidad de documentación disponible. Además, es muy fácil de aprender y usar, y tiene una comunidad activa de desarrolladores que pueden ayudarlo a resolver problemas y proporcionar apoyo.
+                </td>
+                <td class="desventajas-col">
+                    Django es un framework muy potente y poderoso, pero también tiene algunas limitaciones. Por ejemplo, no es muy flexible en cuanto a la estructura de la aplicación, y puede ser un poco difícil de aprender y usar. Además, puede ser más lento que otros frameworks de desarrollo web, especialmente si se está desarrollando una aplicación grande.
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="pregunta">
+        <h2>Ejemplos de Programación en Django</h2>
+        <div class="ejemplos-empresas">
+            <div class="empresa-card">
+                <div class="empresa-header">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" alt="Instagram logo" class="empresa-logo">
+                    <h3 class="empresa-nombre">Instagram</h3>
+                </div>
+                <p class="empresa-descripcion">Usa Python y Django para manejar grandes volúmenes de datos e interacciones, siguiendo principios de simplicidad y uso de tecnologías probadas.</p>
+            </div>
+
+            <div class="empresa-card">
+                <div class="empresa-header">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png" alt="Spotify logo" class="empresa-logo">
+                    <h3 class="empresa-nombre">Spotify</h3>
+                </div>
+                <p class="empresa-descripcion">Utiliza Python y Django para backend y aprendizaje automático, facilitando su amplia biblioteca musical.</p>
+            </div>
+
+            <div class="empresa-card">
+                <div class="empresa-header">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png" alt="YouTube logo" class="empresa-logo">
+                    <h3 class="empresa-nombre">YouTube</h3>
+                </div>
+                <p class="empresa-descripcion">Incorporó Python y Django para mejorar rendimiento y añadir funciones rápidamente.</p>
+            </div>
+
+            <div class="empresa-card">
+                <div class="empresa-header">
+                    <img src="https://yt3.googleusercontent.com/ytc/AIdro_m3npv8LSfXBnC2Os9v2rVsw7Yh2PlJyOFnV_T_iTAHrRc=s900-c-k-c0x00ffffff-no-rj" alt="Washington Post logo" class="empresa-logo">
+                    <h3 class="empresa-nombre">The Washington Post</h3>
+                </div>
+                <p class="empresa-descripcion">Emplean Django para gestionar alto tráfico y contenido eficiente junto con otros periódicos importantes.</p>
+            </div>
+
+            <div class="empresa-card">
+                <div class="empresa-header">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png" alt="NASA logo" class="empresa-logo">
+                    <h3 class="empresa-nombre">NASA</h3>
+                </div>
+                <p class="empresa-descripcion">Usa Django para seguridad, fiabilidad y carga rápida de contenido en su sitio web con millones de usuarios.</p>
+            </div>
+
+            <div class="empresa-card">
+                <div class="empresa-header">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="Google logo" class="empresa-logo">
+                    <h3 class="empresa-nombre">Google</h3>
+                </div>
+                <p class="empresa-descripcion">Emplea Django y Python para procesar grandes datos en su motor de búsqueda con miles de millones de consultas diarias.</p>
+            </div>
+
+            <div class="empresa-card">
+                <div class="empresa-header">
+                    <img src="https://i.insider.com/5dcf16423afd375d9071da72?width=700" alt="Venmo logo" class="empresa-logo">
+                    <h3 class="empresa-nombre">Venmo (PayPal)</h3>
+                </div>
+                <p class="empresa-descripcion">Usa Python y Django en su app para pagos y red social, aplicando estas tecnologías también en fintech.</p>
+            </div>
+
+            <div class="empresa-card">
+                <div class="empresa-header">
+                    <img src="https://www.logo.wine/a/logo/Dropbox_(service)/Dropbox_(service)-Icon-Logo.wine.svg" alt="Dropbox logo" class="empresa-logo">
+                    <h3 class="empresa-nombre">Dropbox</h3>
+                </div>
+                <p class="empresa-descripcion">Basado en Python y Django para almacenamiento en la nube, sincronización y compartición de archivos.</p>
+            </div>
+
+            <div class="empresa-card">
+                <div class="empresa-header">
+                    <img src="https://www.ghacks.net/wp-content/uploads/2021/03/No-the-Firefox-logo-isnt-being-changed.jpg" alt="Mozilla logo" class="empresa-logo">
+                    <h3 class="empresa-nombre">Mozilla</h3>
+                </div>
+                <p class="empresa-descripcion">Migró componentes a Python y Django para gestionar tráfico masivo y mejorar soporte y complementos.</p>
+            </div>
+
+            <div class="empresa-card">
+                <div class="empresa-header">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Pinterest-logo.png/600px-Pinterest-logo.png" alt="Pinterest logo" class="empresa-logo">
+                    <h3 class="empresa-nombre">Pinterest</h3>
+                </div>
+                <p class="empresa-descripcion">Usa Django para escalar y manejar millones de usuarios e interacciones por segundo.</p>
+            </div>
+
+            <div class="empresa-card">
+                <div class="empresa-header">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS78ygB9DVM_GmiHto6DztS2QOWIpIkicNUlw&s" alt="Reddit logo" class="empresa-logo">
+                    <h3 class="empresa-nombre">Reddit</h3>
+                </div>
+                <p class="empresa-descripcion">Depende de Django para gestionar contenido masivo y tráfico en tiempo real, asegurando escalabilidad y eficiencia.</p>
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>
